@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn dev",
     "dev": "vite --port 3001",
-    "build": "vite build",
+    "build": "rm -rf build && vite build",
     "test": "npm run lint",
     "lint": "echo \"lint checking...\" && eslint . --ext .ts,.tsx --fix && echo \"tsc checking...\"",
     "lint-fix": "echo \"lint checking...\" && eslint . --ext .ts,.tsx --fix && echo \"tsc checking...\"",

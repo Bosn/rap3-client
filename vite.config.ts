@@ -13,6 +13,7 @@ const srcAlias = fs.readdirSync(path.resolve(__dirname, './src')).map((dir) => {
 })
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
+  base: 'https://cdn.rapapi.cn/rap-stat',
   resolve: {
     alias: [
       ...srcAlias,
