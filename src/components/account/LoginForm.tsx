@@ -145,6 +145,10 @@ export default function LoginForm() {
             <Link to="#" onClick={() => dispatch(push('/account/findpwd'))} className="operation ">{t('Forgot password?')}</Link>
           </ListItem>
         </List>
+        <Box sx={{ w: 1, display: 'flex', justifyContent: 'center', p: 2 }}>
+          <img src="//img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" width="14" />
+          <a href="https://beian.miit.gov.cn/" rel="noreferrer" target="_blank">京ICP备2024044317号-2</a>
+        </Box>
       </Paper>
     </Box>
   )
