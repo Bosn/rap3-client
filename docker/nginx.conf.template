@@ -1,0 +1,13 @@
+server {
+    listen       38081;
+    server_name  localhost;
+
+    root /rapclient;
+
+    location ^~/api/ {
+      proxy_pass ${RAP_SERVER}/;
+    }
+    location / {
+        try_files $uri /index.html;
+    }
+}
