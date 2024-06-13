@@ -95,7 +95,7 @@ function ManualImport(props: Props) {
                     docUrl: values.docUrl,
                   })
                   if (typeof swagger === 'object') {
-                    const { errMsg } = swagger
+                    const { errMsg } = swagger as any
                     if (errMsg) {
                       setAlertOpen({
                         op: true,

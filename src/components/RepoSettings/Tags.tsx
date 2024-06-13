@@ -38,6 +38,7 @@ import TagForm from './TagForm'
 import './Version.sass'
 type Props = {
   id: number
+  setRefresh: (refresh: boolean) => void
 }
 export default function Tags(props: Props) {
   const { id, setRefresh } = props
@@ -118,6 +119,7 @@ export default function Tags(props: Props) {
     })
   }
   const isSelected = (name: string) => selected.indexOf(name) !== -1
+
   const handleFormClose = async (name?: string) => {
     if (name) {
       const response = await TagService.createTag({
@@ -135,6 +137,7 @@ export default function Tags(props: Props) {
     }
     setOpen(false)
   }
+
   return (
     <Container className="VersionPanel" fixed={true}>
       <Box>
