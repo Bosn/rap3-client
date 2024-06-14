@@ -32,6 +32,8 @@ interface InterfaceEditorProps extends ProviderContext {
   itf: any
   mod: any
   repository: Repository
+  bodyOption: string
+
   lockInterface: typeof lockInterface
   fetchInterface: typeof fetchInterface
   unlockInterface: typeof unlockInterface
@@ -42,7 +44,10 @@ interface InterfaceEditorProps extends ProviderContext {
 }
 
 type InterfaceEditorState = {
-  summaryState: any
+  summaryState: {
+    bodyOption: string
+    posFilter: string
+  }
   itf: any
   properties: Property[]
   editable: boolean
@@ -63,7 +68,7 @@ class InterfaceEditor extends Component<InterfaceEditorProps, InterfaceEditorSta
     handleChangeAllProperty: PropTypes.func.isRequired,
     handleCopyProperty: PropTypes.func.isRequired,
   }
-  constructor(props: any) {
+  constructor(props: InterfaceEditorProps) {
     super(props)
     this.state = {
       ...InterfaceEditor.mapPropsToState(props),

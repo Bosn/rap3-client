@@ -8,7 +8,7 @@ export interface PropertyModalProps {
   initialValues?: string
   onClose?: () => void
   onConfirm?: (v?: string) => void
-  open?: boolean
+  open: boolean
 }
 const PropertyModal = (props: PropertyModalProps) => {
   const { initialValues, onClose, onConfirm, open, placeholder, title } = props

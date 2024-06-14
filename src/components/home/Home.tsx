@@ -35,7 +35,6 @@ const Maiden = () => {
           if (ok) {
             dispatch(push('/repository/joined'))
           }
-          setCreating(false)
         }}
       />
     </div>

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import config from '../../config'
-import { Button, List, ListItem, InputLabel, Input, FormControl, InputAdornment, IconButton, Paper, Box } from '@mui/material'
+import { Button, List, ListItem, InputLabel, Input, FormControl, InputAdornment, IconButton, Paper, Box, Typography } from '@mui/material'
 import Logo from 'components/layout/Logo'
 import { getBGImageUrl } from 'utils/ImageUtils'
 import PhoneIcon from '@mui/icons-material/PhoneIphone'
@@ -57,11 +57,11 @@ export default function LoginForm() {
 
   return (
     <Box sx={{ width: '100%', height: '100%', position: 'absolute', overflow: 'hidden', backgroundSize: 'cover', background: bg }}>
-      <Paper sx={{ width: '350px', margin: 'auto', marginTop: '150px', opacity: 0.85 }}>
+      <Paper sx={{ width: '420px', margin: 'auto', marginTop: '150px', opacity: 0.85 }}>
         <List>
           <form>
             <ListItem>
-              <Logo color="#3f51b5" />
+              <Typography variant="subtitle1">Welcome to RAP</Typography>
             </ListItem>
             <ListItem>
               <FormControl fullWidth={true}>
@@ -75,8 +75,8 @@ export default function LoginForm() {
                   required={true}
                   autoComplete="off"
                   endAdornment={
-                    <InputAdornment position="end" tabIndex={100}>
-                      <IconButton size="large">
+                    <InputAdornment position="end">
+                      <IconButton tabIndex={-1} size="large" >
                         <PhoneIcon />
                       </IconButton>
                     </InputAdornment>}
@@ -94,8 +94,9 @@ export default function LoginForm() {
                   autoComplete="current-password"
                   onChange={e => setPassword(e.target.value)}
                   endAdornment={
-                    <InputAdornment position="end" tabIndex={101}>
+                    <InputAdornment position="end">
                       <IconButton
+                        tabIndex={-1}
                         aria-label="Toggle password visibility"
                         onClick={() => setShowPassword(!showPassword)}
                         size="large">
@@ -109,7 +110,7 @@ export default function LoginForm() {
               <FormControl fullWidth={true}>
                 <InputLabel htmlFor="captcha">{t('Verification code')}</InputLabel>
                 <Input
-                  tabIndex={2}
+                  tabIndex={3}
                   name="captcha"
                   value={captcha}
                   autoComplete="off"
@@ -117,7 +118,7 @@ export default function LoginForm() {
                   onChange={e => setCaptcha(e.target.value)}
                   endAdornment={
                     <InputAdornment position="end">
-                      <IconButton size="large">
+                      <IconButton tabIndex={-1} size="large">
                         <CodeIcon />
                       </IconButton>
                     </InputAdornment>
@@ -133,12 +134,25 @@ export default function LoginForm() {
             </Box>
             <Box>
               <Button
+                sx={{ mr: 1 }}
+                variant="contained"
+                color="primary"
+                tabIndex={4}
+                onClick={handleSubmit}>
+                {t('Login')}
+              </Button>
+              <Button
                 variant="outlined"
+                tabIndex={-1}
                 sx={{ mr: 1 }}
                 onClick={() => dispatch(push('/account/register'))}>
-                {t('Register')}
+                {t('Signup')}
               </Button>
-              <Button variant="contained" color="primary" tabIndex={3} onClick={handleSubmit}>{t('Login')}</Button>
+              <Button
+                variant="outlined"
+                onClick={() => window.open(`https://doc.rapapi.cn`)}>
+                {t('Doc')}
+              </Button>
             </Box>
           </ListItem>
           <ListItem sx={{ display: 'flex', justifyContent: 'flex-end' }}>

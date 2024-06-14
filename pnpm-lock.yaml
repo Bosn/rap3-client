@@ -13,20 +13,23 @@ importers:
   .:
     dependencies:
       '@emotion/react':
-        specifier: ^11.8.2
+        specifier: ^11.11.4
         version: 11.11.4(@types/react@18.3.3)(react@17.0.2)
       '@emotion/styled':
-        specifier: ^11.8.1
+        specifier: ^11.11.5
         version: 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@17.0.2))(@types/react@18.3.3)(react@17.0.2)
       '@mui/icons-material':
-        specifier: ^5.5.1
+        specifier: ^5.15.20
         version: 5.15.20(@mui/material@5.15.20(@emotion/react@11.11.4(@types/react@18.3.3)(react@17.0.2))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@17.0.2))(@types/react@18.3.3)(react@17.0.2))(@types/react@18.3.3)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(@types/react@18.3.3)(react@17.0.2)
       '@mui/material':
-        specifier: ^5.5.3
+        specifier: ^5.15.20
         version: 5.15.20(@emotion/react@11.11.4(@types/react@18.3.3)(react@17.0.2))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@17.0.2))(@types/react@18.3.3)(react@17.0.2))(@types/react@18.3.3)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@mui/styles':
-        specifier: ^5.6.1
+        specifier: ^5.15.20
         version: 5.15.20(@types/react@18.3.3)(react@17.0.2)
+      '@mui/system':
+        specifier: ^5.15.20
+        version: 5.15.20(@emotion/react@11.11.4(@types/react@18.3.3)(react@17.0.2))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@17.0.2))(@types/react@18.3.3)(react@17.0.2))(@types/react@18.3.3)(react@17.0.2)
       animate.css:
         specifier: 4.1.1
         version: 4.1.1
@@ -241,6 +244,9 @@ importers:
       standard:
         specifier: 16.0.4
         version: 16.0.4(@typescript-eslint/parser@4.33.0(eslint@7.18.0)(typescript@4.9.5))
+      tslib:
+        specifier: ^2.6.3
+        version: 2.6.3
       typescript:
         specifier: ^4.5.5
         version: 4.9.5
@@ -9479,11 +9485,7 @@ snapshots:
       jest-runner: 26.6.3
       jest-runtime: 26.6.3
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - supports-color
-      - ts-node
-      - utf-8-validate
 
   '@jest/transform@26.6.2':
     dependencies:
@@ -13387,11 +13389,7 @@ snapshots:
       stack-utils: 2.0.6
       throat: 5.0.0
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - supports-color
-      - ts-node
-      - utf-8-validate
 
   jest-cli@26.6.3:
     dependencies:
