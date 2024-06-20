@@ -226,6 +226,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^2.0.0
         version: 2.2.0(vite@3.2.10(@types/node@20.14.2)(sass@1.77.5)(terser@5.31.1))
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
@@ -2959,6 +2962,10 @@ packages:
 
   dotenv-expand@5.1.0:
     resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
+
+  dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
 
   dotenv@8.2.0:
     resolution: {integrity: sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==}
@@ -11698,6 +11705,8 @@ snapshots:
       is-obj: 2.0.0
 
   dotenv-expand@5.1.0: {}
+
+  dotenv@16.4.5: {}
 
   dotenv@8.2.0: {}
 

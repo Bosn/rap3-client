@@ -186,7 +186,7 @@ export default function MainMenu(props: Props) {
               <Button onClick={() => window.open('https://github.com/infra-fe/rap-client/issues', '_blank')} color="inherit" > {t('Feedback')} </Button>
               <Button color="inherit" onClick={() => {
                 const isChinese = localStorage.getItem('i18nextLng').startsWith('zh')
-                window.open(`https://infra-fe.github.io/rap-client/${isChinese ? 'zh-CN' : ''}`, '_blank')}
+                window.open(`https://doc.rapapi.cn/${isChinese ? 'zh-CN/' : ''}`, '_blank')}
               }>
                 {t('Document')}
               </Button>

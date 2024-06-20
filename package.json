@@ -1,6 +1,6 @@
 {
-  "name": "rap-client",
-  "version": "2.0.0",
+  "name": "rap3-client",
+  "version": "3.0.0",
   "description": "rap-client react app",
   "main": "app.js",
   "scripts": {
@@ -18,9 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:infra-fe/rap-client.git"
+    "url": "git@github.com:bosn/rap3-client.git"
   },
-  "author": "Libby, Bosn",
+  "author": "Bosn",
   "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -105,6 +105,7 @@
     "@types/urijs": "^1.19.17",
     "@types/yup": "^0.29.13",
     "@vitejs/plugin-react": "^2.0.0",
+    "dotenv": "^16.4.5",
     "npm-run-all": "4.1.5",
     "pre-commit": "^1.2.2",
     "react-scripts": "^4.0.3",

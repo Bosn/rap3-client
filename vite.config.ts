@@ -5,6 +5,8 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 import vitePluginImp from 'vite-plugin-imp'
 
+require('dotenv').config()
+
 const srcAlias = fs.readdirSync(path.resolve(__dirname, './src')).map((dir) => {
   return {
     find: dir,
@@ -13,7 +15,6 @@ const srcAlias = fs.readdirSync(path.resolve(__dirname, './src')).map((dir) => {
 })
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
-  // base: '',
   base: process.env.VITE_BASE,
   resolve: {
     alias: [
