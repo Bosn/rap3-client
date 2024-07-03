@@ -76,8 +76,8 @@ function Readme(props: {rapperVersion: string}) {
 
 const AddDepsTextMap = {
   ts: '',
-  normal: '@rapper3/request ',
-  react: '@rapper3/request @rapper3/react-ahooks ahooks ',
+  normal: '@rap-api/request ',
+  react: '@rap-api/request @rap-api/react-ahooks ahooks ',
   dto: 'class-validator class-transformer ',
 }
 
@@ -108,7 +108,7 @@ function RapperInstallerModal({
   const depTextV2 = `yarn add rapper ${getDep(
     rapperType
   )}`
-  const depTextV3 = `yarn add @rapper3/cli ${
+  const depTextV3 = `yarn add @rap-api/cli ${
     AddDepsTextMap[rapperType] || ''
   }`
   const depText = rapperVersion === 'v2' ? depTextV2 : depTextV3
