@@ -183,7 +183,7 @@ export default function MainMenu(props: Props) {
               <Button color="inherit" onClick={() => dispatch(push('/api'))}>{t('API')}</Button>
               <Button color="inherit" onClick={() => dispatch(push('/status'))}>{t('Status')}</Button>
               <Button color="inherit" onClick={() => dispatch(push('/about'))}>{t('About')}</Button>
-              <Button onClick={() => window.open('https://github.com/infra-fe/rap-client/issues', '_blank')} color="inherit" > {t('Feedback')} </Button>
+              <Button onClick={() => window.open('https://github.com/bosn/rap3-server/issues', '_blank')} color="inherit" > {t('Feedback')} </Button>
               <Button color="inherit" onClick={() => {
                 const isChinese = localStorage.getItem('i18nextLng').startsWith('zh')
                 window.open(`https://doc.rapapi.cn/${isChinese ? 'zh-CN/' : ''}`, '_blank')}

@@ -66,7 +66,7 @@ export default function OpenApi(props: Props) {
         }
       </Box>
       <Box>
-        <h2>{t('How to use')}<a href="https://infra-fe.github.io/rap-client/open/upload"
+        <h2>{t('How to use')}<a href="https://doc.rapapi.cn/open/upload"
           target="_blank" rel="noopener noreferrer">
           <HelpOutlineOutlined sx={{ ml: 1, mb: 0.5 }} />
         </a></h2>

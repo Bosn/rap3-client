@@ -240,7 +240,7 @@ function RepositoryForm(props: Props) {
                     >
                       {t('submit')}
                     </Button>
-                    <Button onClick={() => onClose()} disabled={isSubmitting}>
+                    <Button onClick={() => onClose()} disabled={isSubmitting} sx={{ ml: 1 }}>
                       {t('cancel')}
                     </Button>
                   </Box>

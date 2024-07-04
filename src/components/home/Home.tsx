@@ -11,17 +11,19 @@ import './Home.sass'
 import { RootState } from 'actions/types'
 import Button from '@mui/material/Button'
 import RepositoryForm from 'components/repository/RepositoryForm'
+import { Box } from '@mui/system'
 
 const Maiden = () => {
   const [creating, setCreating] = useState(false)
   const dispatch = useDispatch()
   const { t } = useTranslation()
   return (
-    <div className="Maiden">
+    <Box className="Maiden" sx={{ minHeight: '350px' }}>
       <Button
         className="RepositoryCreateButton"
         variant="contained"
         color="primary"
+        size="large"
         onClick={() => {
           setCreating(true)
         }}
@@ -32,12 +34,13 @@ const Maiden = () => {
         title={t('Create Repository')}
         open={creating}
         onClose={(ok: boolean) => {
+          setCreating(false)
           if (ok) {
             dispatch(push('/repository/joined'))
           }
         }}
       />
-    </div>
+    </Box>
   )
 }
 

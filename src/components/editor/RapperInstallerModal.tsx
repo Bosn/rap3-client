@@ -62,7 +62,7 @@ function Readme(props: {rapperVersion: string}) {
       <p>
         {t('Learn more about please click:')}
         <a
-          href={rapperVersion ==='v3'? 'https://infra-fe.github.io/rap-client/code/' :
+          href={rapperVersion ==='v3'? 'https://doc.rapapi.cn/guide/code' :
             'https://www.yuque.com/rap/rapper/readme'}
           target="_blank"
           rel="noopener noreferrer"
@@ -147,7 +147,7 @@ function RapperInstallerModal({
         <Box>
           <div style={{ textAlign: 'center' }}>
             <a
-              href="https://github.com/infra-fe/rapper"
+              href="https://github.com/bosn/rap3-rapper"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -205,7 +205,7 @@ function RapperInstallerModal({
             <Box
               component="a"
               href={rapperVersion === 'v3' ?
-                'https://infra-fe.github.io/rap-client/code/' :
+                'https://doc.rapapi.cn/guide/code' :
                 'https://www.yuque.com/rap/rapper/which-model'}
               sx={{ fontSize: 12, ml: 1.5 }}
               target="_blank"

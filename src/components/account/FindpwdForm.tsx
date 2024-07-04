@@ -9,11 +9,13 @@ import Refresh from '@mui/icons-material/Refresh'
 import { findpwd } from 'actions/account'
 import { push } from 'connected-react-router'
 import { useSnackbar } from 'notistack'
+import { getBGImageUrl } from 'utils/ImageUtils'
 
 const { serve } = config
 
 export default function FindpwdForm() {
   const { t } = useTranslation()
+  const [bg] = useState(getBGImageUrl())
   const [email, setEmail] = useState('')
   const [captchaId, setCaptchaId] = useState(Date.now())
   const [captcha, setCaptcha] = useState('')
@@ -33,8 +35,8 @@ export default function FindpwdForm() {
   }
 
   return (
-    <Box sx={{ width: '100%', height: '100%', position: 'absolute', overflow: 'hidden', backgroundSize: 'cover' }}>
-      <Paper sx={{ width: 350, margin: 'auto', marginTop: 150, opacity: 0.85 }}>
+    <Box sx={{ width: '100%', height: '100%', position: 'absolute', overflow: 'hidden', backgroundSize: 'cover', background: bg }}>
+      <Paper sx={{ width: '420px', margin: 'auto', marginTop: '150px', opacity: 0.85 }}>
         <List>
           <ListItem>
             <h2>{t('Email to reset the password')}</h2>

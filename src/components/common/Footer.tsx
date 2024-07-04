@@ -10,7 +10,7 @@ const Footer = ({ counter }: { counter?: Counter }) => {
       <ul className="friend_links">
         <li>
           <a
-            href="https://github.com/infra-fe/rap-client"
+            href="https://github.com/bosn/rap3-server"
             target="_blank"
             rel="noopener noreferrer"
           >
